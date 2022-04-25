@@ -19,4 +19,20 @@ public class Fibonacci {
         }
 
     }
+
 }
+ArrayList l = new ArrayList();
+int n = nums.length;
+Arrays.sort(nums);
+int count=0,j=0,m=n/3;
+for(int i=0;i<n;i+=count){
+j=i;
+count=0;
+while(j<n && nums[j]==nums[i]){
+count++;
+j++;
+}
+if(count>m) l.add(nums[i]);
+}
+return l;
+}}
